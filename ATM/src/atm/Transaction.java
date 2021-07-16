@@ -35,7 +35,7 @@ public class Transaction {
 	 * @param inAccount the account the transaction belongs to
 	 */
 	public Transaction(double amount, String memo, Account inAccount) {
-		// call the two arg constructor first
+		// call the two args constructor first
 		this(amount, inAccount);
 		
 		// set the memo

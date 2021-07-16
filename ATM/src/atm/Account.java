@@ -30,7 +30,7 @@ public class Account {
 		//get new account UUID
 		this.uuid = theBank.getNewAccountUUID();
 		
-		//init transaction
+		//Initialize transaction
 		this.transactions = new ArrayList<Transaction>();
 		
 		
@@ -38,7 +38,7 @@ public class Account {
 	
 	/*
 	 * get the account ID
-	 * @retrun the uuid
+	 * @return the uuid
 	 */
 	public String getUUID() {
 		return this.uuid;

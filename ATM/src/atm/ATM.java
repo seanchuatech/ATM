@@ -22,10 +22,10 @@ public class ATM {
 		User curUser;
 		while (true) {
 			
-			// stay in the login promt until successful login
+			// stay in the login prompt until successful login
 			curUser = ATM.mainMenuPrompt(theBank, sc);
 			
-			// stau in the menu until user quits
+			// Stay in the menu until user quits
 			ATM.printUserMenu(curUser, sc);
 		}
 	}
@@ -37,12 +37,12 @@ public class ATM {
 	 */
 	public static User mainMenuPrompt(Bank theBank, Scanner sc) {
 		
-		//inits
+		//Initialize
 		String userID;
 		String pin;
 		User authUser;
 		
-		//promot ht user for user ID/PIN combo until a correct one is reached
+		//Prompt the user for user ID/PIN combo until a correct one is reached
 		do {
 			
 			System.out.printf("\n\nWelcome to %s\n\n", theBank.getName());
@@ -66,7 +66,7 @@ public class ATM {
 		//print a summary of the user's accounts
 		theUser.printAccountsSummary();
 		
-		//init
+		//Initialize
 		int choice;
 		
 		//user menu
@@ -109,7 +109,7 @@ public class ATM {
 		}
 		
 		//redisplay this menu unless the user wants to quit
-		//this is called recurrsion
+		//this is called recursion
 		if(choice != 5) {
 			ATM.printUserMenu(theUser, sc);
 		}
@@ -139,13 +139,13 @@ public class ATM {
 	}
 	
 	/*
-	 * Process transffering funds from one account to another
+	 * Process transferring funds from one account to another
 	 * @param theUser the logged-in User object
 	 * @param sc the Scanner object used for user input
 	 */
 	public static void transferFunds(User theUser, Scanner sc) {
 		
-		//inits
+		//Initialize
 		int fromAcct;
 		int toAcct;
 		double amount;
@@ -182,7 +182,7 @@ public class ATM {
 			}
 		} while (amount < 0 || amount > acctBal);
 		
-		// finally, do the transcter
+		// finally, do the transfer
 		theUser.addAcctTransaction(fromAcct, -1*amount, String.format("Transfer to account %s", theUser.getAcctUUID(toAcct)));
 		theUser.addAcctTransaction(toAcct, amount, String.format("Transfer to account %s", theUser.getAcctUUID(fromAcct)));
 	}
@@ -193,7 +193,7 @@ public class ATM {
 	 * @param sc the Scanner object user for user input
 	 */
 	public static void withdrawFunds(User theUser, Scanner sc) {
-		//inits
+		//Initialize
 		int fromAcct;
 		double amount;
 		double acctBal;
@@ -238,7 +238,7 @@ public class ATM {
 	 * @param sc the Scanner object used for user input
 	 */
 	public static void depositFunds(User theUser, Scanner sc) {
-		//inits
+		//Initialize
 		int toAcct;
 		double amount;
 		double acctBal;

@@ -21,11 +21,11 @@ public class Bank {
 		this.accounts = new ArrayList<Account>();
 	}
 	
-	//generate a new iniversally unique ID for a user
+	//generate a new universally unique ID for a user
 	//@return the UUID
 	public String getNewUserUUD() {
 		
-		//inits
+		//Initialize
 		String uuid;
 		Random rng = new Random();
 		int len = 6;
@@ -52,10 +52,10 @@ public class Bank {
 		
 	}
 	
-	//generate a new iniversally unique ID for an account
+	//generate a new universally unique ID for an account
 	//@return the uuid
 	public String getNewAccountUUID() {
-		//inits
+		//Initialize
 		String uuid;
 		Random rng = new Random();
 		int len = 10;
@@ -82,7 +82,7 @@ public class Bank {
 	}
 	
 //	Add an account
-//	@param an Acct the account to add
+//	@param an Account the account to add
 	public void addAccount(Account anAcct)
 	{
 		this.accounts.add(anAcct);
